@@ -40,7 +40,8 @@ const server = http.createServer(async (req, res) => {
       const merchantResponse = await fetch("https://apisandbox.dev.clover.com/v3/merchants/me", {
         method: "GET",
         headers: {
-          "Authorization": `Bearer ${tokenData.access_token}`
+         "Authorization": "Bearer " + tokenData.access_token,
+         "Content-Type": "application/json"
         }
       });
 
