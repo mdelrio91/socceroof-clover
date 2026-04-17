@@ -37,7 +37,7 @@ const server = http.createServer(async (req, res) => {
       }
 
       // Step 2: use token to get merchant info
-      const merchantResponse = await fetch("https://apisandbox.dev.clover.com/v3/merchants/me", {
+      const merchantResponse = await fetch("https://sandbox.dev.clover.com/v3/merchants/me", {
         method: "GET",
         headers: {
          "Authorization": "Bearer " + tokenData.access_token,
